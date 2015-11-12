@@ -1,28 +1,36 @@
 {
     "name": "jsdoclets",
-    "description": "",
-    "version": "0.0.0",
+    "description": "Wrapper for JSDoc doclet generation via the command-line, or through the asynchronous API",
+    "version": "0.1.0",
     "keywords": [
-        "jsdoc"
+        "jsdoc",
+        "doclet",
+        "javascript",
+        "documentation"
     ],
     "main": "./lib/index.js",
     "dependencies": {
-        "jsdoc": "^3.3"
+        "jsdoc":     "^3.4",
+        "commander": "^2.9",
+        "protean":   "^0.6",
+        "globby":    "^4.0",
+        "rx":        "^4.0",
+        "ramda":     "^0.18",
+        "temp":      "^0.8"
     },
     "devDependencies": {
-        "mocha": "^2.3",
-        "chai":  "^3.4",
-        "sinon": "^1.17"
+        "mocha":    "^2.3",
+        "chai":     "^3.4",
+        "del":      "^2.1",
+        "gulp":     "^3.9",
+        "gulp-ejs": "^1.2"
     },
     "scripts": {
-        "test": "./node_modules/.bin/mocha --harmony $(find test -name '*.js')"
+        "build":   "./node_modules/.bin/gulp",
+        "clobber": "./node_modules/.bin/gulp clobber",
+        "test":    "./node_modules/.bin/mocha --harmony $(find test -name '*.js')"
     },
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "http://github.com/jhamlet/jsdoclets/raw/master/LICENSE"
-        }
-    ],
+    "license": "MIT",
     "repository": {
         "type": "git",
         "url": "http://github.com/jhamlet/jsdoclets.git"
