@@ -1,0 +1,33 @@
+{
+    "name": "jsdoclets",
+    "description": "",
+    "version": "0.0.0",
+    "keywords": [
+        "jsdoc"
+    ],
+    "main": "./lib/index.js",
+    "dependencies": {
+        "jsdoc": "^3.3"
+    },
+    "devDependencies": {
+        "mocha": "^2.3",
+        "chai":  "^3.4",
+        "sinon": "^1.17"
+    },
+    "scripts": {
+        "test": "./node_modules/.bin/mocha --harmony $(find test -name '*.js')"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://github.com/jhamlet/jsdoclets/raw/master/LICENSE"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/jhamlet/jsdoclets.git"
+    },
+    "bugs": {
+        "url": "http://github.com/jhamlet/jsdoclets/issues"
+    }
+}
