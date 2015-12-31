@@ -14,15 +14,15 @@ Wrapper for [JSDoc][jsdoc] [doclet][doclet] generation via the
 Installation
 ------------
 
-~~~sh
+```sh
 $ npm install jsdoclets
-~~~
+```
 
 
 Command Line Usage
 ------------------
 
-~~~
+```
 $ jsdoclets -h
 
   Usage: jsdoclets [options] <files...>
@@ -48,22 +48,22 @@ $ jsdoclets -h
     http://usejsdoc.org/about-commandline.html
     http://usejsdoc.org/about-configuring-jsdoc.html
 
-~~~
+```
 
 
 API
 ---
 
-~~~js
+```js
 var jsdoclets = require('jsdoclets');
 
 jsdoclets(null, ['path/to/directory']).
     then(function (doclets) {
         // ...
     });
-~~~
+```
 
-### `jsdoclets(options, globs)` : [`Promise`][promise] \| [`Observable`][observable]
+### `jsdoclets(options, globs)` : [`Promise`][promise] | [`Observable`][observable]
 
 #### `options : Object`
 
@@ -95,7 +95,7 @@ One, or more, file patterns to run [JSDoc][jsdoc] against.
 **Note:** jsdoclets is a curried function and will return a function waiting for
 the next parameter if only invoked with one argument.
 
-~~~js
+```js
 var jsdoclets = require('jsdoclets');
 
 var privates = jsdoclets({ privates: true });
@@ -104,7 +104,7 @@ privates(['path/to/files']).
     then(function (doclets) {
         // ...
     });
-~~~
+```
 
 See [Why Curry Helps](aboutcurry) for more information on currying, and
 [Ramda](ramda) for a great library for doing so.
